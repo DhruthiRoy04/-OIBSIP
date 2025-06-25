@@ -1,0 +1,80 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: left;
+  display: flex;
+  gap: 50px;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.title span {
+  background-color: #ffa500;
+  padding: 6px 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.calculator {
+  background-color: #0a0a0a;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+}
+
+.display {
+  background-color: transparent;
+  color: white;
+  text-align: right;
+  font-size: 2.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.btn.gray {
+  background-color: #d4d4d2;
+  color: black;
+}
+
+.btn.dark {
+  background-color: #505050;
+}
+
+.btn.orange {
+  background-color: #ff9500;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 40px;
+}

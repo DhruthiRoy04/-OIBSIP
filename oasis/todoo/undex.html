@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="images.jpeg" alt="User" />
+        <h3>Dhruthi Roy</h3>
+        <p>roydhruthi@gmail.com</p>
+      </div>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Vital Task</a>
+        <a href="#">My Task</a>
+        <a href="#">Task Categories</a>
+        <a href="#">Settings</a>
+        <a href="#">Help</a>
+      </nav>
+      <a class="logout">Logout</a>
+    </aside>
+
+    <main class="dashboard">
+      <header>
+        <h1>Welcome back, Dhruv 👋</h1>
+        <input type="text" placeholder="Search your task here..." />
+      </header>
+
+      <section class="task-overview">
+        <div class="task-status">
+          <h3>Task Status</h3>
+           <div class="circle green">
+      <span>84% <br>
+        Completed
+      </span>
+    </div>
+
+    <div class="circle blue">
+      <span>46% <br>In Progress</span>
+    </div>
+
+    <div class="circle red">
+      <span>14%<br>Pending</span>
+    </div>
+
+    <div class="circle gray">
+      <span> 0% <br> Not Started</span>
+    </div>
+        </div>
+
+        <div class="task-list">
+          <h3>To-Do</h3>
+          <div class="task-card not-started">
+            <h4>Attend Arjun’s Birthday Party</h4>
+            <p>Pick up gifts and cake (6 PM | Fresh Elements)</p>
+            <small>Priority: Moderate | Status: Not Started</small>
+          </div>
+          <div class="task-card in-progress">
+            <h4>Landing Page Design</h4>
+            <p>Discuss with client by EOD (4 PM | Meeting Room)</p>
+            <small>Priority: Moderate | Status: In Progress</small>
+          </div>
+          <div class="task-card in-progress">
+            <h4>Final Product Presentation</h4>
+            <p>Prepare team and documents</p>
+            <small>Priority: Moderate | Status: In Progress</small>
+          </div>
+        </div>
+
+        <div class="task-list">
+          <h3>Completed Tasks</h3>
+          <div class="task-card completed">
+            <h4>Walk the dog</h4>
+            <p>Park + treats</p>
+            <small>Status: Completed</small>
+          </div>
+          <div class="task-card completed">
+            <h4>Conduct Meeting</h4>
+            <p>Finalize requirements with client</p>
+            <small>Status: Completed</small>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhruthi Roy – Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      
+    }
+
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      border: 2px solid #4b4b4b;
+      border-radius: 8px;
+      margin: 5px auto;
+      width: 70%;
+       position: relative; /* change to fixed if you want sticky */
+  
+      
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 35px;
+      font-size: 16px;
+      transition: 0.3s;
+      
+    }
+
+    nav a:hover {
+      color: #6e4ee4;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      padding: 60px 20%;
+      flex-wrap: wrap;
+      text-align: left;
+      height: 620px;
+    }
+
+    .intro {
+      flex: 1;
+      max-width: 500px;
+      
+    }
+
+    .intro h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      padding: 10px;
+    }
+
+    .intro p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      background-color: #7a72e4;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 5px 15px rgba(68, 255, 68, 0.3);
+      text-decoration: none;
+    }
+
+    .profile-pic {
+      flex: 1;
+      text-align:right;
+    }
+
+    .profile-pic img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      justify-content: right;
+      border: 4px solid #0e1c19;
+    }
+
+   .social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+ .about-container {
+     
+       display: flex;
+      justify-content: space-between;
+      align-items:center;
+      padding: 70px 20%;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align:left;
+      
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #ccc;
+      
+      text-align: left;
+      margin-bottom: 20px;
+     
+    }
+
+    .highlight {
+      color: #334fef;
+      font-weight: bold;
+    }
+
+    .skills-section {
+  background-color: #111;
+  padding: 80px 60px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.skills-text {
+  flex: 1 1 40%;
+}
+
+.skills-text h5 {
+  color: #b58f00;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills-text h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ab62f5;
+  margin-bottom: 20px;
+}
+
+.skills-text p {
+  font-size: 1rem;
+  color: #f8f5f5;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.skills-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skills-buttons .purple {
+  background-color: #6c63ff;
+  color: #1a1919;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+.skills-buttons .outline {
+  color: #6c63ff;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.skills-cards {
+  flex: 1 1 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #141414;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color:  #ab62f5;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #d7d2d2;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dark-section {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.dark-section h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  width: 360px;
+  text-align: left;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #ffffff;
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contact-section {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #fee;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: #6c63ff;
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #6c63ff;
+}
+
+.footer-note {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+ html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#recent-work">Recent Work</a>
+    <a href="#contact">Get In Touch</a>
+  </nav>
+
+  <div class="container">
+    <div class="intro">
+      <h1>Dhruthi <span style="color: #6e4ee4;">Roy</span> </h1>
+      <p>
+        Enthusiastic Data Analyst student with strong skills in statistics, SQL, Python, and Tableau.
+        Passionate about turning data into insights and solving real-world problems. Eager to contribute to a dynamic team through an internship or entry-level role.
+      </p>
+      <a class="cta-button" href="#contact">Let’s get started ➤</a>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/dhruthi-roy-4578922b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><strong><img src="linkedin.png" alt=""></strong></a>
+        <a href="https://github.com/DhruthiRoy04"><strong><img src="github.png" alt=""></strong></a>
+        <a href="mailto: roydhruthi@gmail.com"><strong><img src="mail.png" alt=""></strong></a>
+      </div>
+    </div>
+    <div class="profile-pic">
+      <img src="profile.jpg" alt="Dhruthi Roy">
+    </div>
+  </div>
+
+  <div id="about" class="about-container">
+   
+    <h2>About Me</h2>
+    
+    <p>Hello! I'm <span class="highlight">Dhruthi Roy</span>, an aspiring Data Analyst passionate about solving real-world problems with data.</p>
+    <p>I’m currently pursuing my degree and have developed a strong foundation in statistics, SQL, Python, and Tableau. I enjoy diving into data to uncover insights and trends that help inform better decisions.</p>
+    <p>My academic projects have helped me build experience in data cleaning, visualization, and storytelling. I’ve worked with tools like Excel, Python (Pandas, NumPy, Matplotlib), and SQL to extract and communicate valuable findings.</p>
+    <p>What drives me is the impact that data can have — whether it’s optimizing business strategies, improving customer satisfaction, or revealing hidden patterns. I'm eager to join a dynamic team where I can grow, contribute, and learn.</p>
+    <p>Outside of data, I enjoy reading, photography, and exploring new technologies.</p>
+  </div>
+
+
+  <section id="skills" class="skills-section">
+  <div class="skills-container">
+    <div class="skills-text">
+      <h5>MY SKILLS</h5>
+      <h1>Things I can do as a Data Analyst</h1>
+      <p>From cleaning and analyzing datasets to building visual dashboards and predictive models, I help turn raw data into actionable insights that support better business decisions.</p>
+      <div class="skills-buttons">
+        <a href="#" class="btn purple">Hire Me</a>
+        <a href="RESUME D.pdf" class="btn outline">Download CV</a>
+      </div>
+    </div>
+
+    <div class="skills-cards">
+      <div class="card">
+        <h3>Data Cleaning & Preparation</h3>
+        <p>Skilled in using Python (Pandas, NumPy) and Excel to clean, merge, and manipulate large datasets for analysis.</p>
+        
+      </div>
+      <div class="card">
+        <h3>Data Visualization</h3>
+        <p>Experienced in creating interactive dashboards using Tableau and Power BI to communicate trends and KPIs effectively.</p>
+        
+      </div>
+      <div class="card">
+        <h3>SQL & Database Management</h3>
+        <p>Proficient in writing complex SQL queries to extract, filter, and join data from relational databases.</p>
+        
+      </div>
+      <div class="card">
+        <h3>Statistical Analysis</h3>
+        <p>Good foundation in statistical methods including hypothesis testing, regression, and probability distributions using Python.</p>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recent-work" class="dark-section">
+  <h2>Recent Work</h2>
+  <p class="subtitle">Solving business challenges with data analysis, dashboards, and reporting tools.</p>
+
+  <div class="projects">
+    <div class="project-card">
+      <img src="power bi.jpeg" alt="PwC Power BI Dashboard">
+      <h3>PwC Switzerland – Power BI Simulation</h3>
+      <p>
+        Completed a real-world client simulation with Power BI. Built dashboards focusing on HR data, visualized gender-related KPIs, and 
+        provided actionable insights to engagement partners via email. Demonstrated strong communication and data visualization skills.
+      </p>
+      <a href="https://github.com/DhruthiRoy04/pwc_switzerland" class="btn green"> <spans style="color:#6c63ff;">Know more ➤</span></a>
+    </div>
+
+    <div class="project-card">
+      <img src="keylogger.jpeg" alt="Keylogger Security Tool"><br>
+      <h3>Tracking the Unseen – Keylogger for Security Analysis</h3>
+      <p>
+        Developed a Python-based keylogger to simulate ethical monitoring for security research. Captured and logged real-time 
+        keystrokes using `pynput`, with background operation and optional secure email logging. Focused on awareness and auditing.
+      </p>
+      <a href="https://github.com/DhruthiRoy04/keylogger" class="btn green"> <spans style="color:#6c63ff;">Know more ➤</span></a>
+    </div>
+
+    <div class="project-card">
+         
+         <img src="airlinrs.jpeg" alt="British Airways Data Science">
+        <h3>British Airways – Customer Review Insights</h3>
+        <p>
+          Completed a simulation focused on how data science supports British Airways' success. Scraped and analyzed customer review data, 
+          then built a predictive model to uncover factors influencing passenger buying behavior.
+        </p>
+        <a href="https://github.com/DhruthiRoy04/british_airways" class="btn green"> <spans style="color:#6c63ff;">Know more ➤</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">
+      Have a question, project idea, or just want to connect? Drop me a message and I’ll get back to you soon.
+    </p>
+
+    <form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+
+      <label for="mobile">Mobile</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+      <button type="submit" class="btn green">Submit ➤</button>
+    </form>
+
+    
+  </div>
+</section>
+
+
+
+
+
+
+</body>
+</html>
